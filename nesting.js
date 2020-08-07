@@ -51,6 +51,18 @@ var employees = [
 */
 
 //Code Here
+const emplyeeUpdater = obj =>{
+  if(obj.firstName === 'Theo'){
+    delete obj.firstName
+  }
+  else if(obj.firstName === 'Lorie'){
+    obj.department = 'HR'
+  }
+  console.log(obj)
+  return obj
+}
+
+emplyeeUpdater(employees);
 
 
 
