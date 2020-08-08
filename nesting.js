@@ -43,6 +43,23 @@ var employees = [
 ];
 // Do not edit the code above.
 
+let object = [
+  {
+  "car" : "nnn",
+  "mic" : 'eee',
+  "sun" : "www"
+  },
+  {
+  "car" : "nnn",
+  "mic" : 'eee',
+  "sun" : "www"
+  }]
+
+  // console.log(object)
+  delete object[0].car
+  // console.log(object)
+
+
 /*
   Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
@@ -51,18 +68,18 @@ var employees = [
 */
 
 //Code Here
-const emplyeeUpdater = obj =>{
-  if(obj.firstName === 'Theo'){
-    delete obj.firstName
+function employeeUpdater(){
+  for(i = 0; i <= 4; i++){
+    // console.log(employees[i].firstName)
+    if(employees[i].firstName === 'Theo'){
+      delete employees[i]
+    }
+    else if(employees[i].firstName === 'Lorie'){
+        employees[i].department = 'HR'
+    }
   }
-  else if(obj.firstName === 'Lorie'){
-    obj.department = 'HR'
-  }
-  console.log(obj)
-  return obj
+  return employees
 }
-
-emplyeeUpdater(employees);
 
 
 
@@ -81,7 +98,10 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+function removeDuplicates(arr){
+    let noDuplicate = [...new Set(arr)]
+  return noDuplicate
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -109,8 +129,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name ;
 
 
 
@@ -149,8 +169,17 @@ var myCar = {
     2. Loop over the accidents array.
     3. Change atFaultForAccident from true to false.
 */
-
 //Code Here
+
+function recordCleaner(){
+  myCar.accidents.forEach(function(element, index, array){
+    element.atFaultForAccident = false
+  })
+  // console.log(myCar)
+ return myCar
+}
+
+// recordCleaner();
 
 
 
@@ -170,5 +199,40 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+
+
+// console.log(numsArr[0].length)
+// let whatNumber = numsArr[0][0]
+// console.log(whatNumber)
+
+var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+// function changeNumber0(i,j){
+//     if(numsArr[i][j] % 2 === 0){
+//         numsArr[i][j] = 'even'
+//       }
+//       else{
+//           numsArr[i][j] = 'odd'
+//         }
+//         return numsArr
+//       }
+//       changeNumber0(2,1)
+//       console.log(numsArr)
+      
+      
+
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      console.log(numsArr[j])
+      if(numsArr[i][j] % 2 === 0){
+         numsArr[i][j] = 'even';
+      }
+      else{
+        numsArr[i][j] = 'odd';
+      }
+    }
+  }
+  return numsArr
+}
 
 
