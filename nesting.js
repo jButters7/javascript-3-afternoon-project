@@ -81,6 +81,18 @@ function employeeUpdater(){
   return employees
 }
 
+//Morning Review option
+const employeeUpdater = () => {
+  let filteredEmployees = employees.filter(e => e.firstName !== 'Theo')
+  let mappedEmployees = filteredEmployees.map(e => {
+    if(e.firstName === 'Lorie'){
+      e.department = 'HR'
+    }
+    return e //the elements that don't meet this condition will just go back to what they are
+  })
+  return mappedEmployees
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -104,6 +116,31 @@ function removeDuplicates(arr){
 }
 
 
+//Class Code from morning review (above was my original answer)
+// const removeDuplicates = () => {
+//   for(let i = 0; i < workplaceAccidents.length; i++){
+//     // console.log(workplaceAccidents[i])
+//     for(let j = i + 1; j < workplaceAccidents.length; j++ ){
+//       // console.log(workplaceAccidents[i],workplaceAccidents[j])
+//       if(workplaceAccidents[i] === workplaceAccidents[j]){
+//         workplaceAccidents.splice(i,1)
+//       }
+//     }
+//   }
+//   return workplaceAccidents
+// }
+
+//Additioinal way to complete the process. from morning reiew
+// const removeDuplicates = () =>{ 
+//   workplaceAccidents.forEach((element, index, arr) => {
+//     arr.forEach((num, subIndex) =>{
+//       if(element === num && subIndex > index){
+//         workplaceAccidents.splice(subIndex,1)
+//       }
+//     })
+//   })
+//   return workplaceAccidents  
+// }
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.

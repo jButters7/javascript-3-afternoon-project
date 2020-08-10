@@ -104,7 +104,7 @@ const double = obj => {
 
 //Code Here
 const secrets = obj => {
-  newString = ''
+  let newString = ''
   for(let key in obj){
     if(key.startsWith('sh')){
       newString += `${obj[key]}`

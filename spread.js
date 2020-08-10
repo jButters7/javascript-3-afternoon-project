@@ -52,8 +52,8 @@ let ten = [...numbers][2]
 
 let result = addNums(four, six, ten);
 
-// code here
-
+//Morning Review
+let result = addNums(...numbers)
 
 
 ////////// PROBLEM 4 //////////
